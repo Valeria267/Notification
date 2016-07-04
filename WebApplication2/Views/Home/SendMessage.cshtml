@@ -1,0 +1,14 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main">
+    @using (Html.BeginForm("SendMessage", "Home"))
+    {
+        <input type="hidden" value="@ViewBag.Notification" name="Notification" />
+        @Html.TextBox("Notification", "Введите сообщение")
+        <input id="buttonSend" type="button" value="Отправить" />
+    }
+
+    </div>
